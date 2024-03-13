@@ -34,6 +34,7 @@ class Polynomial : public vector_t<double> {
   // operaciones
   double Eval(const double) const;
   bool IsEqual(const Polynomial&, const double = EPS) const;
+  double Modificacion () const;
  };
 
 
@@ -75,6 +76,16 @@ void Polynomial::Write(std::ostream& os, const double eps) const {
 std::ostream& operator<<(std::ostream& os, const Polynomial& p) {
   p.Write(os);
   return os;
+}
+
+// MODIFICACIÓN
+double Polynomial::Modificacion() const {
+  double resultado = 0;
+  for (int i = 0; i < get_size(); i++) {
+    //double valor = get_val(i);
+    resultado += get_val(i);
+  }
+  return resultado;
 }
 
 // Operaciones con polinomios

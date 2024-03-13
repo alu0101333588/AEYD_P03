@@ -11,6 +11,9 @@
 
 #include <iostream>
 
+// vector denso (normal), más valores distintos de cero
+// vector disperso, más valores igual a cero
+
 #include "polynomial.h"
 
 using namespace std;
@@ -90,6 +93,9 @@ int main()
   cout << "sp2 == p3? " << (sp2.IsEqual(p3) ? "true" : "false") << endl;
   cout << "sp3 == p2? " << (sp3.IsEqual(p2) ? "true" : "false") << endl;
   cout << endl;
+
+  // MODIFICACIÓN
+  cout << "MODIFICACIÓN: " << p1.Modificacion() << std::endl;
 
   return 0;
 }
